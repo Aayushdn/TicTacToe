@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: 'Sniglet', cursive;
+    background-color: #7db9b3;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: space-around;
+  max-height: 600px;
+  max-width: 1000px;
+}
+
+.left{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+}
+
+.left h3{
+    
+    font-weight: 400;
+    font-size: 3rem;
+    color: rgb(122, 108, 25);
+}
+
+.left h1{
+    font-weight: 800;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+
+}
+
+.board-arena{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.board {
+  width: 450px;
+  height: 450px;
+  display: grid;
+  grid-template: repeat(3,1fr) / repeat(3, 1fr);
+  background-color: #364345;
+  border: 3px solid #2e3837;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px -3px #2e3837;
+}
+
+.box {
+  color: #e1f6f4;
+  border: #2e3837 3px solid;
+  border-radius: 1px;
+  font-weight: bold;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:600px) {
+    .board{
+        width: 300px;
+        height: 300px;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+}
+
