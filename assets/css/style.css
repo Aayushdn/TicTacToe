@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -127,7 +128,26 @@ body{
   cursor: pointer;
 }
 
-@media screen and (max-width:600px) {
+.foot1 , .foot2{
+  position: absolute;
+  font-family: 'Handlee', cursive;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.781);
+  font-style: italic;
+}
+
+.foot1{
+  bottom: 0;
+}
+
+.foot2{
+  right: -100px;
+  bottom: -10px;
+  transform: rotate(270deg);
+  transform-origin: 0;
+}
+
+@media screen and (max-width:800px) {
     .board{
         width: 300px;
         height: 300px;
