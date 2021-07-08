@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;600;800&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -32,15 +32,32 @@ body{
 .left h3{
     
     font-weight: 400;
-    font-size: 3rem;
+    font-size : 3rem;
     color: rgb(122, 108, 25);
 }
 
-.left h1{
-    font-weight: 800;
-    font-size: 3rem;
-    color: rgb(255, 255, 255);
+.turnIndicator{
+  width: 100%;
+  display: flex;
+  font-size: clamp(35px,3vw,60px);
+  color: #000202;
+  font-weight: 400;
+  background-color: white;
 
+
+
+}
+
+.turnIndicator *{
+  flex: 1;
+  text-align: center;
+  border: 2px solid black;
+
+}
+
+.presentTurn{
+  background-color: aqua;
+  color: rgb(80, 80, 80);
 }
 
 .board-arena{
@@ -70,6 +87,45 @@ body{
   justify-content: center;
   align-items: center;
 }
+.modal{
+  width: 80vw;
+  max-width: 700px;
+  height: 50vh;
+  max-height: 400px;
+  border: 10px solid #2e3837 ;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  position: absolute;
+  top:50px;
+}
+.modal .heading{
+  text-align: center;
+  display: block;
+  font-size: 4rem;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid gray;
+  box-shadow: 5px 10px 10px gray;
+}
+
+.action{
+  text-align: center;
+}
+
+.btn{
+  width: 50%;
+  height: clamp(70px,5vw,100px);
+  background-color: #611e32;
+  color: white;
+  font-family: 'Sniglet', cursive;
+  font-size: 2rem;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
 @media screen and (max-width:600px) {
     .board{
@@ -79,6 +135,9 @@ body{
 
     .container{
         flex-direction: column;
+    }
+    .left{
+      width: 90vw;
     }
 }
 

@@ -12,15 +12,19 @@
 <body>
     <div class="container">
         <div class="left">
-            <h1>TIC TAC TOE</h1>
-            <h3>Its O turn</h3>
+            <div class="turnIndicator">
+                <div class="xTurn">X Turn</div>
+                <div class="oTurn presentTurn">O Turn</div>
+            </div>
+            <button class="btn" id="resetBtn">Reset</button>
+            
         </div>
         <div class="board-arena">
             <div class="board">
                 <div class="box" id="bx1"></div>
                 <div class="box" id="bx2"></div>
                 <div class="box" id="bx3"></div>
-                <div class="box" id="bx4">X</div>
+                <div class="box" id="bx4"></div>
                 <div class="box" id="bx5"></div>
                 <div class="box" id="bx6"></div>
                 <div class="box" id="bx7"></div>
@@ -28,7 +32,17 @@
                 <div class="box" id="bx9"></div>
             </div>
         </div>
+        <div class="modal" id="mesResetBox">
+            <div class="heading">
+                <span id="message">O has Win</span>
+            </div>
+            <div class="action">
+                <button class="btn" id="gameReset">
+                    Reset Game
+                </button>
+            </div>
+        </div>
     </div>
 </body>
-
+<script src="./assets/js/logic.js"></script>
 </html>
