@@ -1,4 +1,3 @@
-console.log("running");
 
 // Listening to the user clicks
 const boxes = document.querySelectorAll(".box");
@@ -68,7 +67,6 @@ function isBoardFull(){
     boxes.forEach((box) => {
         if (box.innerText !== ""){
             draw++;
-            console.log(draw)
         }
     });
     if (draw === 9){
