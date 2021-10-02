@@ -31,7 +31,7 @@ body{
 }
 
 .left h3{
-    
+
     font-weight: 400;
     font-size : 3rem;
     color: rgb(122, 108, 25);
@@ -79,7 +79,6 @@ body{
 }
 
 .box {
-  color: #e1f6f4;
   border: #2e3837 3px solid;
   border-radius: 1px;
   font-weight: bold;
