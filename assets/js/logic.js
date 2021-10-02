@@ -1,4 +1,3 @@
-console.log("running");
 
 // Listening to the user clicks
 const boxes = document.querySelectorAll(".box");
@@ -47,15 +46,7 @@ let winCondition = [
     [6, 7, 8],
     [2, 4, 6]
 ];
-/*[0,1,2]
-[0,3,6],
-[0,4,8],
-[1,4,7],
-[2,5,8],
-[3,4,5],
-[6,7,8],
-[2,4,6]
-*/
+
 
 function displayMessage(message){
     messageSpan.innerText = message
@@ -76,7 +67,6 @@ function isBoardFull(){
     boxes.forEach((box) => {
         if (box.innerText !== ""){
             draw++;
-            console.log(draw)
         }
     });
     if (draw === 9){
