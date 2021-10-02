@@ -5,8 +5,8 @@ const resetBtn = document.querySelector("#resetBtn");
 const gameReset = document.querySelector("#gameReset");
 const messageBox = document.querySelector("#mesResetBox");
 const messageSpan = document.querySelector("#message");
-const xturnIndicator = document.querySelector(".xTurn"); 
-const oturnIndicator = document.querySelector(".oTurn"); 
+const xturnIndicator = document.querySelector(".xTurn");
+const oturnIndicator = document.querySelector(".oTurn");
 
 resetBtn.addEventListener("click", resetBoard);
 gameReset.addEventListener("click", resetBoard);
@@ -58,7 +58,7 @@ function checkForWinStatus(turn) {
         if (boxes[cond[0]].innerText == boxes[cond[1]].innerText && boxes[cond[0]].innerText == boxes[cond[2]].innerText && boxes[cond[0]].innerText == turn) {
             displayMessage(`${turn} has win`)
         }
-        
+
     })
 }
 
@@ -81,9 +81,9 @@ function whenClicked(elem) {
     if (isBoxEmpty(elem)) {
         drawIt(elem, turn);
         isBoardFull();
-        checkForWinStatus(turn);     
-        
-        if (turn == "O") {
+        checkForWinStatus(turn);
+
+        if (turn === "O") {
             xturnIndicator.classList.add("presentTurn")
             oturnIndicator.classList.remove("presentTurn")
             turn = "X";
@@ -99,5 +99,10 @@ function whenClicked(elem) {
 };
 
 function drawIt(whichElement, turn) {
+    if(turn === "X"){
+        whichElement.style.color = "#A52A2A"
+    } else {
+        whichElement.style.color = "#e1f6f4"
+    }
     whichElement.innerText = turn;
 };
